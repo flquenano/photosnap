@@ -1,0 +1,17 @@
+{
+  "name": "photosnap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Francis Luigie Quenano <flquenano@gmail.com> (flquenano.dev)",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.24.57",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
