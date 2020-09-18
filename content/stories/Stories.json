@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "theme": "dark",
+    "subTitle": "Last month's featured story",
+    "title": "Hazy full of appalachia",
+    "date": "March 2nd 2020",
+    "author": "John Appleseed",
+    "text": "The dissected plateau area, while not actually made up of geological mountains, is popularly called \"mountains,\" especially in eastern Kentucky and West Virginia, and while the ridges are not high, the terrain is extremely rugged."
+  },
+  "gallery": [
+    {
+      "date": "April 16th 2020",
+      "title": "The Mountains",
+      "author": "John Applessed",
+      "preview": {
+        "mobile": "./mountains-1x.jpg",
+        "desktop": "./mountains-3x.jpg"
+      }
+    },
+    {
+      "date": "April 14th 2020",
+      "title": "Sunset Cityscapes",
+      "author": "Benjamin Cruz",
+      "preview": {
+        "mobile": "./cityscapes-1x.jpg",
+        "desktop": "./cityscapes-3x.jpg"
+      }
+    },
+    {
+      "date": "April 11th 2020",
+      "title": "18 Days Voyage",
+      "author": "Alexei Borodin",
+      "preview": {
+        "mobile": "./18-days-voyage-1x.jpg",
+        "desktop": "./18-days-voyage-3x.jpg"
+      }
+    },
+    {
+      "date": "April 9th 2020",
+      "title": "Architecturals",
+      "author": "Samantha Brooke",
+      "preview": {
+        "mobile": "./architecturals-1x.jpg",
+        "desktop": "./architecturals-3x.jpg"
+      }
+    },
+    {
+      "date": "April 7th 2020",
+      "title": "World Tour 2019",
+      "author": "Timothy Wagner",
+      "preview": {
+        "mobile": "./world-tour-1x.jpg",
+        "desktop": "./world-tour-3x.jpg"
+      }
+    },
+    {
+      "date": "April 3rd 2020",
+      "title": "Unforeseen Corners",
+      "author": "by William Malcolm",
+      "preview": {
+        "mobile": "./unforeseen-corners-1x.jpg",
+        "desktop": "./unforeseen-corners-3x.jpg"
+      }
+    },
+
+    {
+      "date": "March 29th 2020",
+      "title": "King on Africa: Part II",
+      "author": "Tim Hillenburg",
+      "preview": {
+        "mobile": "./king-on-africa-1x.jpg",
+        "desktop": "./king-on-africa-3x.jpg"
+      }
+    },
+    {
+      "date": "March 21st 2020",
+      "title": "The Trip to Nowhere",
+      "author": "Felicia Rourke",
+      "preview": {
+        "mobile": "./trip-to-nowhere-1x.jpg",
+        "desktop": "./trip-to-nowhere-3x.jpg"
+      }
+    },
+    {
+      "date": "March 19th 2020",
+      "title": "Rage of The Sea",
+      "author": "Mohammed Abdul",
+      "preview": {
+        "mobile": "./rage-of-the-sea-1x.jpg",
+        "desktop": "./rage-of-the-sea-3x.jpg"
+      }
+    },
+    {
+      "date": "March 16th 2020",
+      "title": "Running Free",
+      "author": "Michelle",
+      "preview": {
+        "mobile": "./running-free-1x.jpg",
+        "desktop": "./running-free-3x.jpg"
+      }
+    },
+    {
+      "date": "March 11th 2020",
+      "title": "Behind the Waves",
+      "author": "Lamarr Wilson",
+      "preview": {
+        "mobile": "./behind-the-waves-1x.jpg",
+        "desktop": "./behind-the-waves-3x.jpg"
+      }
+    },
+    {
+      "date": "March 9th 2020",
+      "title": "Calm Waters",
+      "author": "Samantha Brooke",
+      "preview": {
+        "mobile": "./calm-waters-1x.jpg",
+        "desktop": "./calm-waters-3x.jpg"
+      }
+    },
+    {
+      "date": "March 5th 2020",
+      "title": "The Milky Way",
+      "author": "Benjamin Cruz",
+      "preview": {
+        "mobile": "./milky-way-1x.jpg",
+        "desktop": "./milky-way-3x.jpg"
+      }
+    },
+    {
+      "date": "March 4th 2020",
+      "title": "Night at The Dark Forest",
+      "author": "Mohammed Abdul",
+      "preview": {
+        "mobile": "./dark-forest-1x.jpg",
+        "desktop": "./dark-forest-3x.jpg"
+      }
+    },
+    {
+      "date": "March 1st 2020",
+      "title": "Somwarpet`s Beauty",
+      "author": "Michelle",
+      "preview": {
+        "mobile": "./somwarpet-1x.jpg",
+        "desktop": "./somwarpet-3x.jpg"
+      }
+    },
+    {
+      "date": "February 25th 2020",
+      "title": "Land of Dreams",
+      "author": "William Malcolm",
+      "preview": {
+        "mobile": "./land-of-dreams-1x.jpg",
+        "desktop": "./land-of-dreams-3x.jpg"
+      }
+    }
+  ]
+}
