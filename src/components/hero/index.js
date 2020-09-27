@@ -4,23 +4,24 @@ import PropTypes from "prop-types";
 import {
   Body,
   BodyGradient,
-  Container,
+  Wrapper,
   Content,
   Image,
   Text
 } from "./hero.css.js";
 
-import Button from "../button";
-import Heading from "../heading/index.js";
+import { Button } from "../button";
+import { Heading } from "../heading/index.js";
 
-const HeroComponent = ({
+export const Hero = ({
   height,
   image,
   content,
   reverse = false,
   isBtn = false,
   noGradient = false,
-  color = "light"
+  color = "light",
+  Btn
 }) => {
   const sources = [
     {
@@ -35,7 +36,7 @@ const HeroComponent = ({
   ];
 
   return (
-    <Container height={height} reverse={reverse}>
+    <Wrapper height={height} reverse={reverse}>
       <Image fluid={sources} />
       <Content color={color}>
         <BodyGradient noGradient={noGradient}>
@@ -46,18 +47,25 @@ const HeroComponent = ({
             <Text color={color} isBtn={isBtn}>
               {content.text}
             </Text>
-            {isBtn ? <Button color={color} /> : undefined}
+            {isBtn ? <Button color={color}>{Btn}</Button> : undefined}
           </Body>
         </BodyGradient>
       </Content>
-    </Container>
+    </Wrapper>
   );
 };
 
-HeroComponent.propTypes = {
+Hero.propTypes = {
   image: PropTypes.object.isRequired,
-  content: PropTypes.object.isRequired,
+  height: PropTypes.string.isRequired,
+  reverse: PropTypes.bool,
+  isBtn: PropTypes.bool,
+  Btn: PropTypes.string,
+  noGradient: PropTypes.bool,
+  color: PropTypes.oneOf(["light", "dark"]),
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  }),
   theme: PropTypes.oneOf(["light", "dark"])
 };
-
-export default HeroComponent;

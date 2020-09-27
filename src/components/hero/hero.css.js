@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import Img from "gatsby-image";
-import $Text from "../text";
+import { Text as DefaultText } from "../text";
 
 const animateX = keyframes` 
   0% {background-position:0% 50%}
@@ -13,7 +13,7 @@ const animateY = keyframes`
   100% {background-position:50% 0%}
 `;
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
   position: relative;
   width: 100%;
   @media ${(props) => props.theme.breakpoints.xs} {
@@ -59,8 +59,8 @@ export const BodyGradient = styled.div`
     display: ${(props) => (props.noGradient ? "none" : "block")};
     content: "";
     position: absolute;
-    height: 6px;
-    width: 128px;
+    height: 0.6rem;
+    width: 12.8rem;
     top: 0;
     left: 0;
     background-image: linear-gradient(15deg, #ffc694, #bc7198, #5776ff);
@@ -68,14 +68,14 @@ export const BodyGradient = styled.div`
     animation: ${animateX} 5s ease infinite;
     @media ${(props) => props.theme.breakpoints.xs} {
       height: 100%;
-      width: 6px;
+      width: 0.6rem;
       background-size: 100% 300%;
       animation: ${animateY} 5s ease infinite;
     }
   }
   @media ${(props) => props.theme.breakpoints.xs} {
     width: 100%;
-    margin: 11.53rem 0;
+    margin: 17.3rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -84,16 +84,16 @@ export const BodyGradient = styled.div`
 
 export const Body = styled.div`
   position: relative;
-  width: 318px;
-  padding: 4.8rem 0;
+  width: 31.8rem;
+  padding: 7.2rem 0;
   @media ${(props) => props.theme.breakpoints.xs} {
     padding: 0;
     width: 80%;
-    max-width: 387px;
+    max-width: 38.7rem;
   }
 `;
 
-export const Text = styled($Text)`
+export const Text = styled(DefaultText)`
   margin-bottom: ${(props) => (props.isBtn ? "16px" : "0px")};
   color: ${(props) =>
     props.color === "dark"

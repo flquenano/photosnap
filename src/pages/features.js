@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout.js";
+import { Layout } from "../components/layout";
 import { Hero, Features } from "../sections/features";
 import { CTA } from "../components/cta";
 

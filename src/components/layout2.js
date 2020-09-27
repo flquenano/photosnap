@@ -3,8 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle.js";
 import { theme } from "./Theme.js";
 
-import Header from "./header.js";
-import Footer from "./footer.js";
+import Header from "./header2.js";
+import Footer from "./footer2.js";
 
 const Container = styled.div`
   position: relative;

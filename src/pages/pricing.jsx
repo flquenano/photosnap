@@ -1,16 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Hero, Offers } from "../sections/pricing";
+
+import { Toggle } from "../components/toggle";
+import { Card } from "../components/card";
+import { Layout } from "../components/layout";
+
 const Wrapper = styled.div`
   position: relative;
   margin: 0 auto;
   width: 1440px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  place-content: center;
+  padding-top: 100px;
 `;
 
 const PricingPage = () => {
-  return <Wrapper></Wrapper>;
+  return (
+    <Layout>
+      <Hero />
+      <Offers />
+    </Layout>
+  );
 };
 
 // export const query = graphql`

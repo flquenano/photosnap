@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Item } from "./item";
 import { Wrapper } from "./gallery.css.js";
-import Item from "./item";
-const GalleryComponent = ({ images }) => {
-  console.log(images);
+
+export const Gallery = ({ images }) => {
   return (
     <Wrapper>
       {images.map((image, idx) => (
@@ -12,4 +13,6 @@ const GalleryComponent = ({ images }) => {
   );
 };
 
-export default GalleryComponent;
+Gallery.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.object).isRequired
+};

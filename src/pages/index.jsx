@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout.js";
+import { Layout } from "../components/layout";
 import { Hero, HeroTwo, HeroThree, Gallery, Features } from "../sections/home";
 
 const Index = () => {

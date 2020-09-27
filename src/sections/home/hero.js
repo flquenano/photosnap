@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Hero from "../../components/hero";
+import { Hero } from "../../components/hero";
 
 export const HeroMain = () => {
   const {
@@ -52,6 +52,7 @@ export const HeroMain = () => {
       color={introMain.color}
       height="650px"
       isBtn={true}
+      Btn="GET AN INVITE"
     />
   );
 };

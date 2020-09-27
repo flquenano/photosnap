@@ -13,7 +13,7 @@ import {
   Arrow
 } from "./item.css.js";
 
-const Item = ({ image }) => {
+export const Item = ({ image }) => {
   const [ref, inView] = useInView({
     threshold: 0.2
   });
@@ -52,7 +52,10 @@ const Item = ({ image }) => {
 };
 
 Item.propTypes = {
-  image: PropTypes.object.isRequired
+  image: PropTypes.shape({
+    date: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    preview: PropTypes.objectOf(PropTypes.object).isRequired
+  })
 };
-
-export default Item;

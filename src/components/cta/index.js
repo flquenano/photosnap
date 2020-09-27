@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Wrapper, Header, BodyGradient, Image, Content } from "./cta.css.js";
-import Button from "../button";
+import { Wrapper, Heading, BodyGradient, Image, Content } from "./cta.css.js";
+import { Button } from "../button";
 
 export const CTA = () => {
   const { mobile, tablet, desktop } = useStaticQuery(graphql`
@@ -44,9 +44,9 @@ export const CTA = () => {
       <Image fluid={sources} />
       <BodyGradient>
         <Content>
-          <Header size="xl" color="dark">
+          <Heading size="xl" color="dark">
             We’re in beta. Get your invite today!
-          </Header>
+          </Heading>
           <Button color="dark" />
         </Content>
       </BodyGradient>

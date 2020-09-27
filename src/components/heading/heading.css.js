@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeadingXL = styled.h1`
-  font-size: clamp(2.13rem, 6vw, 2.67rem);
+  font-size: clamp(3.2rem, 6vw, 4rem);
   line-height: 40px;
   letter-spacing: 3.33px;
   text-transform: uppercase;
@@ -18,12 +18,18 @@ export const HeadingXL = styled.h1`
 `;
 
 export const HeadingMD = styled.h1`
-  font-size: 1.6rem;
-  line-height: 25px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: ${(props) =>
+    props.color === "dark"
+      ? props.theme.colors.secondary.white
+      : props.theme.colors.secondary.dark};
 `;
 
 export const HeadingSM = styled.h1`
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
   line-height: 1.67rem;
   color: ${(props) =>
     props.color === "dark"
@@ -32,9 +38,9 @@ export const HeadingSM = styled.h1`
 `;
 
 export const HeadingXS = styled.h1`
-  font-size: 0.87rem;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
   font-weight: 400;
+  letter-spacing: 2px;
   color: ${(props) =>
     props.color === "dark"
       ? props.theme.colors.secondary.white

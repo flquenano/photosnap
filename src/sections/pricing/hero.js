@@ -2,13 +2,13 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Hero } from "../../components/hero";
 
-export const HeroTwo = () => {
+export const HeroSection = () => {
   const {
-    homeJson: { introTwo }
+    pricingJson: { hero }
   } = useStaticQuery(graphql`
     query {
-      homeJson {
-        introTwo {
+      pricingJson {
+        hero {
           text
           color
           title
@@ -42,17 +42,14 @@ export const HeroTwo = () => {
 
   return (
     <Hero
-      image={introTwo.image}
+      image={hero.image}
       content={{
-        title: introTwo.title,
-        text: introTwo.text
+        title: hero.title,
+        text: hero.text
       }}
-      color={introTwo.color}
-      height="600px"
-      isBtn={true}
-      Btn="VIEW THE STORIES"
-      noGradient={true}
-      reverse={true}
+      color={hero.color}
+      height="490px"
+      isBtn={false}
     />
   );
 };

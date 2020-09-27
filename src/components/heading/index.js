@@ -1,7 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { HeadingXL, HeadingMD, HeadingSM, HeadingXS } from "./heading.css.js";
 
-const HeadingComponent = ({ className, color, size, children }) => {
+export const Heading = ({ className, color, size, children }) => {
   switch (size) {
     case "xl":
       return (
@@ -33,4 +34,9 @@ const HeadingComponent = ({ className, color, size, children }) => {
   }
 };
 
-export default HeadingComponent;
+Heading.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  color: PropTypes.oneOf(["light", "dark"]),
+  size: PropTypes.oneOf(["xl", "md", "sm", "xs"]).isRequired
+};

@@ -1,10 +1,15 @@
 import React from "react";
-import { Text } from "./text.css.js";
+import PropTypes from "prop-types";
+import { Wrapper } from "./text.css.js";
 
-const TextComponent = ({ children, color, className }) => (
-  <Text className={className} color={color}>
+export const Text = ({ children, color, className }) => (
+  <Wrapper className={className} color={color}>
     {children}
-  </Text>
+  </Wrapper>
 );
 
-export default TextComponent;
+Text.propTypes = {
+  color: PropTypes.oneOf(["dark", "light"]),
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired
+};

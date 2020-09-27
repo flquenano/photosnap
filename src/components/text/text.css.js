@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Text = styled.p`
-  font-size: 1rem;
-  line-height: 1.667rem;
+export const Wrapper = styled.p`
+  font-size: 1.5rem;
+  line-height: 2.5rem;
   opacity: 0.6;
   color: ${(props) =>
     props.color === "dark"

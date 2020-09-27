@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import Gallery from "../../components/gallery";
+import { Gallery } from "../../components/gallery";
 
 const GallerySection = () => {
   const {

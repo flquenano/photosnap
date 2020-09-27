@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Img from "gatsby-image";
 
-import Heading from "../heading";
+import { Heading as DefaultHeading } from "../heading";
 import {
   GradientHorizontal,
   GradientVertical
@@ -75,7 +75,7 @@ export const Content = styled.div`
   }
 `;
 
-export const Header = styled(Heading)`
+export const Heading = styled(DefaultHeading)`
   width: clamp(310px, 100%, 400px);
   @media (max-width: 540px) {
     margin-bottom: 24px;

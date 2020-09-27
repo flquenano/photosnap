@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Wrapper } from "./features.css.js";
-import Feature from "./feature";
+import { Feature } from "./feature";
 
 export const Features = ({ features }) => {
   return (

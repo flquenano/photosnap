@@ -1,11 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { Wrapper, Arrow } from "./button.css.js";
 
-import { Button, Arrow } from "./button.css.js";
-
-const ButtonComponent = ({ className, color }) => (
-  <Button className={className} color={color}>
-    Get an invite <Arrow className="arrow-svg" color={color} />
-  </Button>
+export const Button = ({
+  className,
+  color = "light",
+  noArrow = false,
+  children
+}) => (
+  <Wrapper className={className} color={color}>
+    {children} {noArrow ? null : <Arrow className="arrow-svg" color={color} />}
+  </Wrapper>
 );
 
-export default ButtonComponent;
+Button.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.oneOf(["light", "dark"]),
+  noArrow: PropTypes.bool,
+  children: PropTypes.node.isRequired
+};

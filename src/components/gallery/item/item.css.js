@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import Img from "gatsby-image";
-import Heading from "../../heading";
+import { Heading as DefaultHeading } from "../../heading";
 import ArrowSvg from "./arrow.svg";
 
 const animateX = keyframes` 
@@ -11,23 +11,23 @@ const animateX = keyframes`
 
 export const Wrapper = styled.div`
   position: relative;
-  height: 375px;
+  height: 37.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: all 250ms;
   @media ${(props) => props.theme.breakpoints.sm} {
-    height: 500px;
+    height: 50rem;
   }
   &:hover {
     cursor: pointer;
-    transform: translateY(-30px);
+    transform: translateY(-3rem);
     &::before {
       content: "";
       position: absolute;
-      height: 6px;
+      height: 0.6rem;
       width: 100%;
-      bottom: -6px;
+      bottom: -0.6rem;
       background-image: linear-gradient(15deg, #ffc694, #bc7198, #5776ff);
       background-size: 300% 100%;
       animation: ${animateX} 5s ease infinite;
@@ -47,20 +47,18 @@ export const Image = styled(Img)`
   height: 100%;
 `;
 
-export const HeadingSM = styled(Heading)`
-  font-weight: 700;
-  margin-bottom: 4px;
+export const HeadingSM = styled(DefaultHeading)`
+  margin-bottom: 0.4rem;
 `;
 
-export const HeadingXS = styled(Heading)`
-  font-weight: 400;
+export const HeadingXS = styled(DefaultHeading)`
   &:first-of-type {
-    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
   }
   &:last-of-type {
-    padding-bottom: 1.06rem;
+    padding-bottom: 1.6rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-    margin-bottom: 1.33rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -68,13 +66,13 @@ export const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.67rem;
+  margin-bottom: 4rem;
 `;
 
 export const ButtonHeading = styled.h1`
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.secondary.white};
 `;
