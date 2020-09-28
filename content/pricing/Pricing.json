@@ -29,7 +29,7 @@
   "compare": {
     "title": "The Features",
     "privilege": ["Basic", "Pro", "Business"],
-    "feature": [
+    "features": [
       {
         "title": "UNLIMITED STORY POSTING",
         "isBasic": true,

@@ -6,6 +6,7 @@ import { Hero, Offers } from "../sections/pricing";
 import { Toggle } from "../components/toggle";
 import { Card } from "../components/card";
 import { Layout } from "../components/layout";
+import { Compare } from "../components/compare";
 
 const Wrapper = styled.div`
   position: relative;
@@ -21,6 +22,7 @@ const PricingPage = () => {
     <Layout>
       <Hero />
       <Offers />
+      <Compare />
     </Layout>
   );
 };

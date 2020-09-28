@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
   height: auto;
   justify-items: center;
   align-items: baseline;

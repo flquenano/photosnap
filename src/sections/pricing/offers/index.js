@@ -1,20 +1,8 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import styled from "styled-components";
-
+import { Wrapper, CardGroup } from "./offers.css.js";
 import { Toggle } from "../../../components/toggle";
 import { Card } from "../../../components/card";
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const CardGroup = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const ToggleWrapper = styled.div``;
 
 export const Offers = () => {
   const [toggle, setToggle] = useState(false);
