@@ -1,10 +1,5 @@
 import React from "react";
-import { Wrapper } from "./sns.css.js";
-import FB from "./facebook.svg";
-import YT from "./youtube.svg";
-import TW from "./twitter.svg";
-import PT from "./pinterest.svg";
-import IG from "./instagram.svg";
+import { Wrapper, FB, YT, TW, PT, IG } from "./sns.css.js";
 
 export const SNS = ({ className }) => (
   <Wrapper className={className}>

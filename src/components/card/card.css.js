@@ -111,6 +111,7 @@ export const Text = styled(DefaultText)`
 
 export const Button = styled(DefaultButton)`
   width: 100%;
+  transition: all 250ms;
   background-color: ${(props) =>
     props.color === "dark"
       ? props.theme.colors.secondary.white
@@ -123,5 +124,12 @@ export const Button = styled(DefaultButton)`
   justify-content: center;
   @media ${(props) => props.theme.breakpoints.xs} {
     order: 1;
+  }
+  &:hover {
+    background: ${(props) => props.theme.colors.secondary.grey};
+    color: ${(props) => props.theme.colors.secondary.black};
+    span {
+      border-bottom: none;
+    }
   }
 `;

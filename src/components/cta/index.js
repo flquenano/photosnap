@@ -47,7 +47,7 @@ export const CTA = () => {
           <Heading size="xl" color="dark">
             We’re in beta. Get your invite today!
           </Heading>
-          <Button color="dark" />
+          <Button color="dark">Get an invite</Button>
         </Content>
       </BodyGradient>
     </Wrapper>

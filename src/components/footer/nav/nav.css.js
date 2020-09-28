@@ -8,6 +8,11 @@ export const Wrapper = styled.ul`
   text-align: center;
 `;
 export const Item = styled.li`
+  cursor: pointer;
+  transition: all 250ms;
+  &:hover {
+    opacity: 0.3;
+  }
   &:not(:last-child) {
     margin-bottom: 1.9rem;
   }

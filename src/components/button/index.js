@@ -9,7 +9,8 @@ export const Button = ({
   children
 }) => (
   <Wrapper className={className} color={color}>
-    {children} {noArrow ? null : <Arrow className="arrow-svg" color={color} />}
+    <span>{children} </span>{" "}
+    {noArrow ? null : <Arrow className="arrow-svg" color={color} />}
   </Wrapper>
 );
 

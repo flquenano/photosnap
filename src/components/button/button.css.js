@@ -2,9 +2,10 @@ import styled from "styled-components";
 import ArrowSvg from "./arrow.svg";
 
 export const Wrapper = styled.div`
+  flex-grow: 0;
   display: flex;
-  justify-content: space-between;
-  width: 20rem;
+  width: auto;
+  justify-content: flex-start;
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
@@ -19,10 +20,27 @@ export const Wrapper = styled.div`
     .arrow-svg {
       transform: translateX(1rem);
     }
+    span {
+      border-bottom: 1px solid
+        ${(props) =>
+          props.color === "dark"
+            ? props.theme.colors.secondary.white
+            : props.theme.colors.secondary.black};
+    }
   }
 `;
 
+export const Content = styled.span`
+  transition: all 250ms;
+  border-bottom: 1px solid
+    ${(props) =>
+      props.color === "dark"
+        ? props.theme.colors.secondary.black
+        : props.theme.colors.secondary.white};
+`;
+
 export const Arrow = styled(ArrowSvg)`
+  margin-left: 1rem;
   transition: all 250ms ease-out;
   path {
     stroke: ${(props) =>

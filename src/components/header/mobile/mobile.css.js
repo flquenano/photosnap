@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 export const Wrapper = styled(animated.div)`
   position: fixed;
-  display: none;
+  display: flex;
   justify-content: center;
   width: 100%;
   top: 7.2rem;
   padding: 3.2rem;
   background: ${(props) => props.theme.colors.secondary.white};
+  overflow: hidden;
 `;
 
 export const List = styled.ul`

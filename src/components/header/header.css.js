@@ -38,8 +38,13 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   display: inline;
+  cursor: pointer;
+  transition: all 250ms;
   &:not(:last-child) {
     margin-right: 3.7rem;
+  }
+  &:hover {
+    opacity: 0.3;
   }
 `;
 

@@ -10,7 +10,6 @@ import Close from "./close.svg";
 
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
-
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width: 768px)");
     mediaQuery.addListener(handleMediaQueryChange);
