@@ -9,6 +9,16 @@ const animateX = keyframes`
   100% {background-position:0% 50%}
 `;
 
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 40%, #000000);
+`;
+
 export const Wrapper = styled.div`
   position: relative;
   height: 37.5rem;
@@ -48,7 +58,7 @@ export const Image = styled(Img)`
 `;
 
 export const HeadingSM = styled(DefaultHeading)`
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 `;
 
 export const HeadingXS = styled(DefaultHeading)`

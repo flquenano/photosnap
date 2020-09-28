@@ -34,5 +34,5 @@ export const GallerySection = () => {
     }
   `);
 
-  return <Gallery images={gallery} />;
+  return <Gallery images={gallery} noDate={true} />;
 };

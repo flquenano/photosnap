@@ -4,9 +4,10 @@ import { Text } from "../../text";
 
 import { Wrapper, Icon, Heading } from "./feature.css.js";
 
-export const Feature = ({ icon, title, text }) => {
+export const Feature = ({ icon, title, text, page }) => {
+  console.log(page);
   return (
-    <Wrapper>
+    <Wrapper page={page}>
       <Icon src={icon} />
       <Heading size="sm" color="light">
         {title}

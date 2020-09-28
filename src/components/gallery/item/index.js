@@ -10,10 +10,11 @@ import {
   HeadingSM,
   Button,
   ButtonHeading,
+  Overlay,
   Arrow
 } from "./item.css.js";
 
-export const Item = ({ image }) => {
+export const Item = ({ image, noDate }) => {
   const [ref, inView] = useInView({
     threshold: 0.2
   });
@@ -29,10 +30,13 @@ export const Item = ({ image }) => {
   return (
     <Wrapper>
       <Image fluid={sources} />
+      <Overlay />
       <Content>
-        <HeadingXS size="xs" color="dark">
-          {image.date}
-        </HeadingXS>
+        {noDate ? null : (
+          <HeadingXS size="xs" color="dark">
+            {image.date}
+          </HeadingXS>
+        )}
 
         <HeadingSM size="sm" color="dark">
           {image.title}

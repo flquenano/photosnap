@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Wrapper } from "./features.css.js";
 import { Feature } from "./feature";
 
-export const Features = ({ features }) => {
+export const Features = ({ features, page }) => {
   return (
     <Wrapper>
       {features.map((feature) => (
@@ -12,6 +12,7 @@ export const Features = ({ features }) => {
           icon={feature.icon.publicURL}
           title={feature.title}
           text={feature.text}
+          page={page}
         />
       ))}
     </Wrapper>

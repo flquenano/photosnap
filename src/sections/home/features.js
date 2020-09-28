@@ -19,5 +19,5 @@ export const FeatureSection = () => {
       }
     }
   `);
-  return <Features features={features} />;
+  return <Features features={features} page="home" />;
 };

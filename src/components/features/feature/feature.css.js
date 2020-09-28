@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   margin-bottom: 5.6rem;
   @media ${(props) => props.theme.breakpoints.md} {
     width: 35rem;
-    margin-bottom: 10.4rem;
+    margin-bottom: ${(props) => (props.page === "home" ? 0 : "10.4rem")};
   }
 `;
 
