@@ -27,7 +27,7 @@ export const Header = () => {
   };
 
   const navAnimation = useSpring({
-    transform: navOpen ? `translateY(0)` : `translateY(-10%)`,
+    transform: navOpen ? `translateY(0)` : `translateY(-120%)`,
     opacity: navOpen ? 1 : 0
   });
   const toggleNav = () => setNavOpen(!navOpen);
