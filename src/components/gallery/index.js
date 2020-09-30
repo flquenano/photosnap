@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Item } from "./item";
 import { Wrapper } from "./gallery.css.js";
 
-export const Gallery = ({ images, noDate = false }) => {
+export const Gallery = ({ images, noDate }) => {
   return (
     <Wrapper>
       {images.map((image, idx) => (
@@ -11,6 +11,10 @@ export const Gallery = ({ images, noDate = false }) => {
       ))}
     </Wrapper>
   );
+};
+
+Gallery.defaultProps = {
+  noDate: false
 };
 
 Gallery.propTypes = {

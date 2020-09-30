@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 import {
   GradientHorizontal,
   GradientVertical
@@ -8,12 +7,14 @@ import { Text as DefaultText } from "../text";
 import { Heading } from "../heading";
 import { Button as DefaultButton } from "../button";
 
-export const Wrapper = styled(animated.div)`
+export const Wrapper = styled.div`
   position: relative;
   width: clamp(31rem, 90%, 35rem);
-  background: ${({ color, theme }) =>
-    color === "dark" ? theme.colors.secondary.black : "#F5F5F5"};
-  height: ${({ color }) => (color === "dark" ? "470px" : "407px")};
+  background: ${(props) =>
+    props.colorScheme === "dark"
+      ? props.theme.colors.secondary.black
+      : "#F5F5F5"};
+  height: ${(props) => (props.colorScheme === "dark" ? "470px" : "407px")};
   padding: 4.8rem 2.2rem;
   display: flex;
   flex-direction: column;
@@ -34,13 +35,13 @@ export const Wrapper = styled(animated.div)`
   }
 
   @media ${(props) => props.theme.breakpoints.lg} {
-    margin: 0 ${(props) => (props.color === "dark" ? "3rem" : "0")};
-    padding: ${({ color }) =>
-      color === "dark" ? "8.8rem 4rem 7.1rem" : "5.6rem 4rem 4rem"};
+    margin: 0 ${(props) => (props.colorScheme === "dark" ? "3rem" : "0")};
+    padding: ${(props) =>
+      props.colorScheme === "dark" ? "8.8rem 4rem 7.1rem" : "5.6rem 4rem 4rem"};
   }
 
   &::before {
-    display: ${(props) => (props.color === "light" ? "none" : "block")};
+    display: ${(props) => (props.colorScheme === "light" ? "none" : "block")};
     content: "";
     position: absolute;
     height: 0.6rem;
@@ -113,12 +114,12 @@ export const Button = styled(DefaultButton)`
   width: 100%;
   transition: all 250ms;
   background-color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
   padding: 1.2rem 0;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.black
       : props.theme.colors.secondary.white};
   justify-content: center;

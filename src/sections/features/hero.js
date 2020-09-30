@@ -47,7 +47,7 @@ export const HeroSection = () => {
         title: hero.title,
         text: hero.text
       }}
-      color={hero.color}
+      colorScheme={hero.color}
       height="490px"
       isBtn={false}
     />

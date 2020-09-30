@@ -37,7 +37,7 @@ export const Image = styled(Img)`
 
 export const Content = styled.div`
   background: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.black
       : props.theme.colors.secondary.white};
   width: 100%;
@@ -96,7 +96,7 @@ export const Body = styled.div`
 export const Text = styled(DefaultText)`
   margin-bottom: ${(props) => (props.isBtn ? "16px" : "0px")};
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
   @media ${(props) => props.theme.breakpoints.sm} {

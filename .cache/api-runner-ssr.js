@@ -1,6 +1,9 @@
 var plugins = [{
       plugin: require('D:/gatsby/photosnap/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('D:/gatsby/photosnap/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"FrontendMentor","short_name":"FEMentor","start_url":"/","background_color":"#f7f0eb","theme_color":"#6abecd","display":"standalone","icon":"src/static/favicon-32x32.png","cache_busting_mode":"query","include_favicon":true,"legacy":true,"theme_color_in_head":true,"cacheDigest":"a07f423b8bbf4a50c2c449b96795fcb6"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

@@ -2,41 +2,50 @@ import React from "react";
 import PropTypes from "prop-types";
 import { HeadingXL, HeadingMD, HeadingSM, HeadingXS } from "./heading.css.js";
 
-export const Heading = ({ className, color, size, children }) => {
+export const Heading = ({ className, colorScheme, size, children }) => {
   switch (size) {
     case "xl":
       return (
-        <HeadingXL className={className} color={color}>
+        <HeadingXL className={className} colorScheme={colorScheme}>
           {children}
         </HeadingXL>
       );
     case "md":
       return (
-        <HeadingMD className={className} color={color}>
+        <HeadingMD className={className} colorScheme={colorScheme}>
           {children}
         </HeadingMD>
       );
 
     case "sm":
       return (
-        <HeadingSM className={className} color={color}>
+        <HeadingSM className={className} colorScheme={colorScheme}>
           {children}
         </HeadingSM>
       );
     case "xs":
       return (
-        <HeadingXS className={className} color={color}>
+        <HeadingXS className={className} colorScheme={colorScheme}>
           {children}
         </HeadingXS>
       );
     default:
-      break;
+      return (
+        <HeadingSM className={className} colorScheme={colorScheme}>
+          {children}
+        </HeadingSM>
+      );
   }
+};
+
+Heading.defaultProps = {
+  colorScheme: "light",
+  size: "md"
 };
 
 Heading.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(["light", "dark"]),
+  colorScheme: PropTypes.oneOf(["light", "dark"]),
   size: PropTypes.oneOf(["xl", "md", "sm", "xs"]).isRequired
 };

@@ -49,7 +49,7 @@ export const HeroMain = () => {
         title: introMain.title,
         text: introMain.text
       }}
-      color={introMain.color}
+      colorScheme={introMain.color}
       height="650px"
       isBtn={true}
       Btn="GET AN INVITE"

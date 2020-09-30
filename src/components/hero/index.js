@@ -17,10 +17,10 @@ export const Hero = ({
   height,
   image,
   content,
-  reverse = false,
-  isBtn = false,
-  noGradient = false,
-  color = "light",
+  reverse,
+  isBtn,
+  noGradient,
+  colorScheme,
   Btn
 }) => {
   const sources = [
@@ -38,21 +38,30 @@ export const Hero = ({
   return (
     <Wrapper height={height} reverse={reverse}>
       <Image fluid={sources} />
-      <Content color={color}>
+      <Content colorScheme={colorScheme}>
         <BodyGradient noGradient={noGradient}>
           <Body>
-            <Heading color={color} size="xl">
+            <Heading colorScheme={colorScheme} size="xl">
               {content.title}
             </Heading>
-            <Text color={color} isBtn={isBtn}>
+            <Text colorScheme={colorScheme} isBtn={isBtn}>
               {content.text}
             </Text>
-            {isBtn ? <Button color={color}>{Btn}</Button> : undefined}
+            {isBtn ? (
+              <Button colorScheme={colorScheme}>{Btn}</Button>
+            ) : undefined}
           </Body>
         </BodyGradient>
       </Content>
     </Wrapper>
   );
+};
+
+Hero.defaultProps = {
+  colorScheme: "light",
+  reverse: false,
+  isBtn: false,
+  noGradient: false
 };
 
 Hero.propTypes = {
@@ -62,7 +71,7 @@ Hero.propTypes = {
   isBtn: PropTypes.bool,
   Btn: PropTypes.string,
   noGradient: PropTypes.bool,
-  color: PropTypes.oneOf(["light", "dark"]),
+  colorScheme: PropTypes.oneOf(["light", "dark"]),
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired

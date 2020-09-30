@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../GlobalStyle.js";
 import { theme } from "../Theme.js";
@@ -16,3 +17,7 @@ export const Layout = ({ children }) => (
     </Container>
   </ThemeProvider>
 );
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+};

@@ -16,6 +16,10 @@ export const GlobalStyle = createGlobalStyle`
     height: auto;
   }
 
+  img:not([alt]){
+    border: 5px solid red;
+  }
+
   ul,
   li,
   body,

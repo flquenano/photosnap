@@ -20,5 +20,5 @@ export const FeaturesSection = () => {
     }
   `);
 
-  return <Features features={features} />;
+  return <Features features={features} page="features" />;
 };

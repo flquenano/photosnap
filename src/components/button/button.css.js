@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowSvg from "./arrow.svg";
+import { Arrow as DefaultArrow } from "../arrow";
 
 export const Wrapper = styled.div`
   flex-grow: 0;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   text-transform: uppercase;
   white-space: nowrap;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
   &:hover {
@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
     span {
       border-bottom: 1px solid
         ${(props) =>
-          props.color === "dark"
+          props.colorScheme === "dark"
             ? props.theme.colors.secondary.white
             : props.theme.colors.secondary.black};
     }
@@ -34,17 +34,17 @@ export const Content = styled.span`
   transition: all 250ms;
   border-bottom: 1px solid
     ${(props) =>
-      props.color === "dark"
+      props.colorScheme === "dark"
         ? props.theme.colors.secondary.black
         : props.theme.colors.secondary.white};
 `;
 
-export const Arrow = styled(ArrowSvg)`
+export const Arrow = styled(DefaultArrow)`
   margin-left: 1rem;
   transition: all 250ms ease-out;
   path {
     stroke: ${(props) =>
-      props.color === "dark"
+      props.colorScheme === "dark"
         ? props.theme.colors.secondary.white
         : props.theme.colors.secondary.black};
   }

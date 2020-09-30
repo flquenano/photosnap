@@ -38,16 +38,15 @@ export const CTA = () => {
     mobile.childImageSharp.fluid
   ];
 
-  console.log(mobile);
   return (
     <Wrapper>
       <Image fluid={sources} />
       <BodyGradient>
         <Content>
-          <Heading size="xl" color="dark">
+          <Heading size="xl" colorScheme="dark">
             We’re in beta. Get your invite today!
           </Heading>
-          <Button color="dark">Get an invite</Button>
+          <Button colorScheme="dark">Get an invite</Button>
         </Content>
       </BodyGradient>
     </Wrapper>

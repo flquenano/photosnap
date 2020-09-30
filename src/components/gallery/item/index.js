@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useInView } from "react-intersection-observer";
-import { CSSTransition } from "react-transition-group";
 import {
   Wrapper,
   Image,
@@ -15,10 +13,6 @@ import {
 } from "./item.css.js";
 
 export const Item = ({ image, noDate }) => {
-  const [ref, inView] = useInView({
-    threshold: 0.2
-  });
-
   const sources = [
     {
       ...image.preview.desktop.childImageSharp.fluid,
@@ -33,16 +27,16 @@ export const Item = ({ image, noDate }) => {
       <Overlay />
       <Content>
         {noDate ? null : (
-          <HeadingXS size="xs" color="dark">
+          <HeadingXS size="xs" colorScheme="dark">
             {image.date}
           </HeadingXS>
         )}
 
-        <HeadingSM size="sm" color="dark">
+        <HeadingSM size="sm" colorScheme="dark">
           {image.title}
         </HeadingSM>
 
-        <HeadingXS size="xs" color="dark">
+        <HeadingXS size="xs" colorScheme="dark">
           by {image.author}
         </HeadingXS>
 

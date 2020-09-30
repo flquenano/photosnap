@@ -39,26 +39,25 @@ export const Offers = () => {
 
   return (
     <Wrapper>
-      <br />
       <Toggle setToggle={fn} toggle={toggle} />
-      <br />
+
       <CardGroup>
         <Card
-          color="light"
+          colorScheme="light"
           option={basic.title}
           text={basic.text}
           price={basic.price[toggle ? 1 : 0]}
           subtext={toggle ? "per year" : "per month"}
         />
         <Card
-          color="dark"
+          colorScheme="dark"
           option={pro.title}
           text={pro.text}
           price={pro.price[toggle ? 1 : 0]}
           subtext={toggle ? "per year" : "per month"}
         />
         <Card
-          color="light"
+          colorScheme="light"
           option={business.title}
           text={business.text}
           price={business.price[toggle ? 1 : 0]}

@@ -72,6 +72,8 @@ export const RightFooter = styled.div`
   align-items: center;
   @media ${(props) => props.theme.breakpoints.md} {
     align-items: flex-end;
+    justify-content: space-between;
+    height: 12.1rem;
   }
 `;
 

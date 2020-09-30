@@ -24,7 +24,7 @@ export const Footer = () => (
       <MobileNav />
       <DesktopNav />
       <RightFooter>
-        <Button color="dark">Get an invite</Button>
+        <Button colorScheme="dark">Get an invite</Button>
         <Copyright>Copyright 2020. All Rights Reserved</Copyright>
       </RightFooter>
     </Content>

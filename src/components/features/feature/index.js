@@ -5,10 +5,9 @@ import { Text } from "../../text";
 import { Wrapper, Icon, Heading } from "./feature.css.js";
 
 export const Feature = ({ icon, title, text, page }) => {
-  console.log(page);
   return (
     <Wrapper page={page}>
-      <Icon src={icon} />
+      <Icon src={icon} alt="Feature Logo" />
       <Heading size="sm" color="light">
         {title}
       </Heading>
@@ -20,5 +19,6 @@ export const Feature = ({ icon, title, text, page }) => {
 Feature.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+  text: PropTypes.string.isRequired,
+  page: PropTypes.string.isRequired
 };

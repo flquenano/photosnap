@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import {
   Wrapper,
   ToggleWrapper,
@@ -23,4 +25,9 @@ export const Toggle = ({ setToggle, toggle }) => {
       </Yearly>
     </Wrapper>
   );
+};
+
+Toggle.propTypes = {
+  setToggle: PropTypes.func.isRequired,
+  toggle: PropTypes.bool.isRequired
 };

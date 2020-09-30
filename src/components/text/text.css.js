@@ -5,7 +5,7 @@ export const Wrapper = styled.p`
   line-height: 2.5rem;
   opacity: 0.6;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
 `;

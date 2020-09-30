@@ -7,7 +7,7 @@ export const HeadingXL = styled.h1`
   text-transform: uppercase;
   margin-bottom: 1.067rem;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.dark};
   @media ${(props) => props.theme.breakpoints.sm} {
@@ -22,17 +22,18 @@ export const HeadingMD = styled.h1`
   font-weight: 700;
   line-height: 2.5rem;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
-      : props.theme.colors.secondary.dark};
+      : props.theme.colors.secondary.black};
 `;
 
 export const HeadingSM = styled.h1`
   font-size: 1.8rem;
   font-weight: 700;
+  letter-spacing: 1.2px;
   line-height: 1.67rem;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
 `;
@@ -42,7 +43,7 @@ export const HeadingXS = styled.h1`
   font-weight: 400;
   letter-spacing: 2px;
   color: ${(props) =>
-    props.color === "dark"
+    props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
 `;

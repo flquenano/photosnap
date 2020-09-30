@@ -10,6 +10,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   transition: position 250ms;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 0 11.45%;
+  }
 `;
 
 export const Nav = styled.nav`

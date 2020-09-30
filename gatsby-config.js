@@ -1,6 +1,13 @@
 const path = require("path");
 
 module.exports = {
+  siteMetadata: {
+    title: `Photosnap`,
+    author: `Francis Luigie Quenano`,
+    description: `A marketing photo-sharing app`,
+    keywords: ["frontendmentor", "photosnap", "advanced", "flquenano"],
+    siteURL: `https://photosnap-plum.vercel.app/`
+  },
   plugins: [
     `gatsby-transformer-json`,
     {
@@ -54,6 +61,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-svg`
+    `gatsby-plugin-react-svg`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `FrontendMentor`,
+        short_name: `FEMentor`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#6abecd`,
+        display: `standalone`,
+        icon: "src/static/favicon-32x32.png"
+      }
+    }
   ]
 };

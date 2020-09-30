@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import {
   Wrapper,
   Content,
-  PriceWrapper,
   Option,
   Text,
   SubText,
@@ -12,28 +13,36 @@ import {
   LandscapePriceWrapper
 } from "./card.css.js";
 
-export const Card = ({ color, option, text, price, subtext }) => (
-  <Wrapper color={color}>
+export const Card = ({ colorScheme, option, text, price, subtext }) => (
+  <Wrapper colorScheme={colorScheme}>
     <Content>
-      <Option color={color} size="md">
+      <Option colorScheme={colorScheme} size="md">
         {option}
       </Option>
-      <Text color={color}>{text}</Text>
+      <Text colorScheme={colorScheme}>{text}</Text>
       <PortraitPriceWrapper>
-        <Price size="xl" color={color}>
+        <Price size="xl" colorScheme={colorScheme}>
           {price}
         </Price>
-        <SubText color={color}>{subtext}</SubText>
+        <SubText colorScheme={colorScheme}>{subtext}</SubText>
       </PortraitPriceWrapper>
-      <Button color={color} noArrow={true}>
+      <Button colorScheme={colorScheme} noArrow={true}>
         Pick plan
       </Button>
     </Content>
     <LandscapePriceWrapper>
-      <Price size="xl" color={color}>
+      <Price size="xl" colorScheme={colorScheme}>
         {price}
       </Price>
-      <SubText color={color}>{subtext}</SubText>
+      <SubText colorScheme={colorScheme}>{subtext}</SubText>
     </LandscapePriceWrapper>
   </Wrapper>
 );
+
+Card.propTypes = {
+  colorScheme: PropTypes.oneOf(["light", "dark"]).isRequired,
+  option: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  subtext: PropTypes.string.isRequired
+};
