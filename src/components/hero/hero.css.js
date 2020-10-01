@@ -75,7 +75,7 @@ export const BodyGradient = styled.div`
   }
   @media ${(props) => props.theme.breakpoints.xs} {
     width: 100%;
-    margin: 17.3rem 0;
+    margin: auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
