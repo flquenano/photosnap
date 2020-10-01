@@ -2,7 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { useSpring } from "react-spring";
 
-import { Wrapper, Nav, List, Item, MobileNav, Button } from "./header.css.js";
+import {
+  Wrapper,
+  Nav,
+  List,
+  Item,
+  MobileNav,
+  Button,
+  Overlay,
+  Filler
+} from "./header.css.js";
 import { Mobile } from "./mobile";
 import Logo from "../../static/logo.svg";
 import Burger from "./menu.svg";
@@ -33,32 +42,36 @@ export const Header = () => {
   const toggleNav = () => setNavOpen(!navOpen);
 
   return (
-    <Wrapper nav={navOpen}>
-      <Nav>
-        <Link to="/">
-          <Logo />
-        </Link>
-        <List>
-          <Item>
-            <Link to="/stories">Stories </Link>
-          </Item>
-          <Item>
-            <Link to="/features">Features </Link>
-          </Item>
-          <Item>
-            <Link to="/pricing">Pricing </Link>
-          </Item>
-        </List>
-        <Button>Get an invite</Button>
-        <MobileNav>
-          {navOpen ? (
-            <Close onClick={toggleNav} />
-          ) : (
-            <Burger onClick={toggleNav} />
-          )}
-        </MobileNav>
-      </Nav>
-      <Mobile style={navAnimation} navOpen={navOpen} />
-    </Wrapper>
+    <>
+      {navOpen ? <Filler /> : null}
+      <Wrapper nav={navOpen}>
+        <Nav>
+          <Link to="/">
+            <Logo />
+          </Link>
+          <List>
+            <Item>
+              <Link to="/stories">Stories </Link>
+            </Item>
+            <Item>
+              <Link to="/features">Features </Link>
+            </Item>
+            <Item>
+              <Link to="/pricing">Pricing </Link>
+            </Item>
+          </List>
+          <Button>Get an invite</Button>
+          <MobileNav>
+            {navOpen ? (
+              <Close onClick={toggleNav} />
+            ) : (
+              <Burger onClick={toggleNav} />
+            )}
+          </MobileNav>
+        </Nav>
+        <Mobile style={navAnimation} navOpen={navOpen} />
+        {navOpen ? <Overlay /> : null}
+      </Wrapper>
+    </>
   );
 };

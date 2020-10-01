@@ -5,8 +5,6 @@ export const Wrapper = styled.div`
   z-index: 999;
   width: 100%;
   height: 7.2rem;
-  padding: 0 6.4%;
-  background: ${(props) => props.theme.colors.secondary.white};
   display: flex;
   justify-content: center;
   transition: position 250ms;
@@ -15,14 +13,25 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const Filler = styled.div`
+  height: 7.2rem;
+  width: 100%;
+  background: ${(props) => props.theme.colors.secondary.white};
+`;
+
 export const Overlay = styled.div`
   position: fixed;
+  z-index: 997;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
 `;
 
 export const Nav = styled.nav`
+  position: relative;
+  padding: 0 6.4%;
+  background: ${(props) => props.theme.colors.secondary.white};
+  z-index: 999;
   width: 100%;
   display: flex;
   align-items: center;
@@ -36,6 +45,8 @@ export const MobileNav = styled.div`
 `;
 
 export const List = styled.ul`
+  position: relative;
+  z-index: 999;
   display: none;
   text-transform: uppercase;
   font-size: 1.2rem;
