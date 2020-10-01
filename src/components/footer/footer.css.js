@@ -26,6 +26,9 @@ export const Content = styled.div`
     flex-flow: row nowrap;
     justify-content: space-between;
   }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 6.4rem 11.45%;
+  }
 `;
 
 export const LeftFooter = styled.div``;
