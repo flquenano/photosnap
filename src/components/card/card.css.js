@@ -26,8 +26,8 @@ export const Wrapper = styled.div`
 
   @media (min-width: 540px) and (max-width: 1280px) {
     flex-wrap: wrap;
-    height: 27rem;
-    width: clamp(54rem, 90%, 76.8rem);
+    height: auto;
+    width: clamp(50rem, 90%, 76.8rem);
     padding: 4rem;
     flex-direction: row;
     align-items: flex-start;

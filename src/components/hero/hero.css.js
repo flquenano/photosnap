@@ -94,12 +94,12 @@ export const Body = styled.div`
 `;
 
 export const Text = styled(DefaultText)`
-  margin-bottom: ${(props) => (props.isBtn ? "16px" : "0px")};
+  margin-bottom: ${(props) => (props.isBtn ? "23px" : "0px")};
   color: ${(props) =>
     props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.black};
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-bottom: ${(props) => (props.isBtn ? "21px" : "0px")};
+    margin-bottom: ${(props) => (props.isBtn ? "48px" : "0px")};
   }
 `;

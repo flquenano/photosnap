@@ -10,7 +10,10 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   @media ${(props) => props.theme.breakpoints.sm} {
-    height: 284px;
+    height: 28.4rem;
+  }
+  @media ${(props) => props.theme.breakpoints.lg} {
+    height: 25rem;
   }
 `;
 

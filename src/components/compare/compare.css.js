@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  white-space: nowrap;
   width: 90%;
   max-width: 73.1rem;
   font-size: 1.2rem;
@@ -22,7 +23,7 @@ export const Header = styled.div`
   text-transform: uppercase;
   padding-bottom: 2.3rem;
   border-bottom: 1px solid #000000;
-  margin-bottom: 2.3rem;
+  margin-bottom: 1.6rem;
 `;
 
 export const Features = styled.ul`

@@ -7,18 +7,24 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   width: 90%;
   max-width: 73.1rem;
-  padding-bottom: 2.4rem;
+  padding: 2.3rem 0 2.4rem;
   border-bottom: 1px solid rgba(216, 216, 216, 1);
-  margin-bottom: 2.4rem;
   @media ${(props) => props.theme.breakpoints.xs} {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media ${(props) => props.theme.breakpoints.sm} {
+    padding: 2.35rem 0;
   }
 `;
 
 export const Heading = styled(DefaultHeading)`
   font-weight: 700;
   margin-bottom: 1.65rem;
+  @media ${(props) => props.theme.breakpoints.sm} {
+    margin-bottom: 0;
+  }
 `;
 
 export const Body = styled.div`

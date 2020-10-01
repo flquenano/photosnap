@@ -15,6 +15,13 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const Overlay = styled.div`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+`;
+
 export const Nav = styled.nav`
   width: 100%;
   display: flex;

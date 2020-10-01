@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   position: relative;
   width: 100%;
   @media ${(props) => props.theme.breakpoints.xs} {
-    height: 650px;
+    height: 65rem;
     display: flex;
     align-items: center;
   }
@@ -33,7 +33,10 @@ export const Content = styled.div`
 `;
 
 export const OverheadHeading = styled(Heading)`
-  margin-bottom: 1.6rem; ;
+  margin-bottom: 1.6rem;
+  @media ${(props) => props.theme.breakpoints.xs} {
+    margin-bottom: 2.4rem;
+  }
 `;
 
 export const MainHeading = styled(Heading)`

@@ -5,13 +5,13 @@ export const HeadingXL = styled.h1`
   line-height: 40px;
   letter-spacing: 3.33px;
   text-transform: uppercase;
-  margin-bottom: 1.067rem;
+  margin-bottom: 1.6rem;
   color: ${(props) =>
     props.colorScheme === "dark"
       ? props.theme.colors.secondary.white
       : props.theme.colors.secondary.dark};
   @media ${(props) => props.theme.breakpoints.sm} {
-    margin-bottom: 1.4rem;
+    margin-bottom: 2.1rem;
     line-height: 48px;
     letter-spacing: 4.17px;
   }
