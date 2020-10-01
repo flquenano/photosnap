@@ -8,9 +8,6 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   transition: position 250ms;
-  @media ${(props) => props.theme.breakpoints.lg} {
-    padding: 0 11.45%;
-  }
 `;
 
 export const Filler = styled.div`
@@ -36,6 +33,9 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media ${(props) => props.theme.breakpoints.lg} {
+    padding: 0 11.45%;
+  }
 `;
 
 export const MobileNav = styled.div`
