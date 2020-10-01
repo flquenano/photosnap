@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { StoriesHero as Hero } from "../../components/StoriesHero";
+import { StoriesHero as Hero } from "../../components/storiesHero";
 
 export const StoriesHero = () => {
   const {
